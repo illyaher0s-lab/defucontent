@@ -1,544 +1,179 @@
 ---
 name: defu-content-planning
-description: Plan, create, review, and learn from 德夫国际石材 content. Turn customer situations, business goals, available assets, external inspiration, and content feedback into customer-centered topics, scripts, shot plans, edits, and reusable content patterns. Use for 德夫 content strategy, topic development, asset-to-content work, script/copy creation, content review, and content learning; not for raw internal interviews/minutes, non-content sales copy, unrelated rewriting, generic stone-industry copy, or other brands' copy.
+description: Plan, create, review, and learn from 德夫国际石材 content. Use for 德夫内容策划、选题、脚本、素材转化、内容审查、企业目标转译和发布反馈复盘。Turn customer situations, business goals, available assets, external inspiration, and validated feedback into customer-centered propositions, executable content, and reusable patterns. Do not use for raw meeting notes, non-content sales copy, generic stone-industry copy, or other brands.
 ---
 
 # 德夫内容策划
 
-Turn 德夫国际石材的客户信息、经营目标、素材、灵感和既有内容／数据，变成：
+把混合输入直接转成：
 
-**值得做的内容 → 明确的内容命题 → 能拍的结构 → 能直接执行的画面和文案。**
+**客户值得看的命题 → 能拍的内容 → 可验证的结果 → 有证据的复用规则。**
 
-输入可以混合，不要求用户先分类。
+消费者的任务和判断是主线；德夫、产品、展厅、工厂、加工、安装与服务只作为答案或证据。完成必要判断后立即进入创作。
 
-这个 Skill 不是审核系统。
+## Workflow
 
-判断的目的，是为了更快找到正确的创作方向，而不是给内容增加越来越多的门槛。
+### 1. 路由
 
-完成必要判断后，应尽快进入创作。
+先选一条路径，不要求用户整理输入。
 
----
+| 路径 | 触发条件 | 读取 | 交付 |
+| --- | --- | --- | --- |
+| **Fast** | 受众、目标、输出和事实风险清楚 | 默认只读本文件；有品牌／事实风险时关键词检索直接相关真源 | 直接给可执行内容，不展示策略报告 |
+| **Full** | 新方向、需求模糊、高成本制作、企业目标、外部灵感、完整审稿 | 关键词检索相关真源，并读 [content-system.md](references/content-system.md) | 紧凑决策卡＋最佳方向＋所需执行稿 |
+| **Learning** | 明确认可／否定、真实发布数据、已确认客户反馈、规则冲突 | 关键词检索相关真源，并读 [asset-rules.md](references/asset-rules.md) | 一项可追溯的增量更新 |
 
-## Core principle
+只读取直接相关片段；首次未找到答案时再扩大检索。普通生成可读资产，不得写入资产。
 
-所有消费者内容优先从：
+### 2. 确定唯一主任务
 
-**客户正在经历什么、想完成什么、担心什么、如何判断**
+单条内容只能有一个主任务，最多一个次任务。
 
-出发。
+| 主任务 | 要改变什么 | 常见内容 |
+| --- | --- | --- |
+| 需求激发 | 问题意识、购买标准 | 装修准备、台面需求觉醒 |
+| 欲望提升 | 想要程度、结果想象 | 案例、花色、空间、生活方式 |
+| 决策帮助 | 选择成本、判断标准、风险 | 科普、选购、避坑、核验 |
+| 信任建立 | 交付信心、责任确定性 | 加工、安装、服务、问题处理 |
+| 本地承接 | 到店／咨询理由、行动成本 | 昆明案例、展厅、看实物、本地能力 |
 
-德夫、产品、展厅、工厂、加工、安装、服务和品牌能力主要作为：
+不得用其他任务的指标否定它：欲望型内容不强制 CTA，信任型过程不强制漂亮成品，需求激发不要求立即咨询。
 
-**答案、解决方案或证据**
+### 3. 形成内容命题
 
-出现。
+内部明确：目标客户、主任务、可用证据，并用一句自然语言回答：
 
-“多说你，少说我”不是机械增加“你”字，而是让客户的任务和决策成为内容主线。
+> 这条内容帮助谁，完成什么具体判断或进展，为什么值得看？
 
----
+若输入是“介绍公司／展厅／工厂／服务／品牌／产品／昆明能力”，先完成：
 
-## First decide the job of this content
+**企业想说什么 → 客户为什么需要知道 → 客户正在完成什么任务 → 当前方式哪里不够 → 他担心什么 → 哪项真实能力能降低风险或成本 → 什么证据能证明**
 
-每条内容必须先确定一个 **primary content job**。
+企业资产无法转成客户价值时，不包装成宣传选题；改提客户任务方向。
 
-只允许一个主任务，最多附带一个次任务。
+重要的需求激发或 S/A 阶段内容，再检查：具体场景、客户任务、当前方案、阻碍、担忧、推动条件和证据。找到真实内容问题即停止，不机械追问或制造洞察。
 
-### 1. Demand creation｜需求激发
+### 4. 通过证据门
 
-让原本没有明确台面需求的人意识到：
+重要判断按以下标签处理：
 
-**这件事为什么值得关注。**
+- **已确认**：用户原话、可核对素材或直接真源。
+- **工作假设**：有用但尚未验证的解释；注明依据。
+- **待确认**：缺失后会改变方向、发布或承诺的信息。
 
-主要服务：泛装修准备期、厨房方案形成期、台面需求觉醒期。
+选择一个结果：
 
-重点改变：需求动机、问题意识、购买标准。
+- **现在做**：事实与素材足以执行。
+- **补证后做**：先给标记稿或低成本验证方向，并列最小补证动作。
+- **不做**：主张不可证实、风险过高或没有客户价值；说明替代方向。
 
----
+🔴 **CHECKPOINT · 发布／批量制作前**
 
-### 2. Desire building｜欲望提升
+涉及价格、性能、认证、比较排名、案例规模、合作关系、独家性、服务承诺、安全或素材授权时，证据未核验则停止发布级交付。省略主张或标“待核验”；仅在缺失信息会改变方案时询问，最多 3 个问题。
 
-让客户更想得到某种：空间效果、花色、台面、生活方式或最终结果。
+### 5. 转成可执行内容
 
-主要内容：案例、花色、空间、美感、生活方式。
+#### Fast path
 
-重点改变：想要程度。
+直接交付用户要的成品。内部判断不必展示。
 
----
+#### Full path
 
-### 3. Decision help｜决策帮助
+先给紧凑决策卡：
 
-帮助已经开始考虑台面的客户：更容易判断、选择和排除错误方案。
+1. 输入与证据状态
+2. 给谁／唯一主任务
+3. 当前判断与优先级
+4. 客户任务、阻碍与工作假设
+5. 一句话内容命题、记忆点、所需证据
+6. 结果：现在做／补证后做／不做
 
-主要内容：台面科普、材料判断、选购、避坑、配套核验。
+“现在做”时给 3–5 个真正不同的方向并首推一个；差异必须来自客户阶段、要改变的判断、命题、证据或叙事角度，不是标题换词。“补证后做”只给最小验证版本。“不做”不得继续批量写同类标题或宣传稿。
 
-重点改变：选择成本、判断标准、感知风险。
+#### 视频执行标准
 
----
+默认交付到拍摄／剪辑人员无需重新设计：
 
-### 4. Trust building｜信任建立
+- 一句话内容命题与合适形式
+- 前 1–3 秒画面、首屏字幕、第一段旁白、继续观看理由
+- 镜头表：段落｜画面｜字幕/旁白｜作用
+- 时长、镜头顺序、节奏、原声／音乐、文字位置
+- 标题、封面；仅在主任务需要时加入 CTA
 
-通过真实行为和事实证明：德夫能把事情做好。
+画面必须承担信息。能由画面证明的内容不重复解释；没有完工画面不制造前后对比。昆明可放标题、封面、角标、定位或项目地点，不强塞进第一句。
 
-主要内容：工人、加工、安装、选板、现场、服务、问题处理、真实经营过程。
+### 6. 交付前检查
 
-重点改变：信任、交付确定性、感知风险。
+按主任务验收：
 
----
+| 主任务 | 首要检查 |
+| --- | --- |
+| 需求激发 | 目标相关、问题觉醒、吸引力、洞察可信、是否形成新判断 |
+| 欲望提升 | 视觉吸引、想要程度、客户投射、结果真实可达 |
+| 决策帮助 | 问题准确、判断有用、表达清楚、证据与风险降低 |
+| 信任建立 | 行为真实、过程证据、责任与交付信心、品牌关联 |
+| 本地承接 | 本地识别、到店／咨询理由、信任、行动摩擦 |
 
-### 5. Local conversion｜本地承接
+再检查：
 
-让已经存在相关需求的昆明客户：知道德夫就在本地，并产生看实物、咨询、到店或进一步了解的理由。
+1. 去掉“德夫”后，目标客户是否仍得到具体价值？
+2. 开头是否从客户场景、问题、结果或真实画面进入，而非企业自我介绍？
+3. 每个事实主张是否有证据、条件或“待核验”标记？
+4. 标题是否兑现内容？画面能否执行？是否仍需创作人员补核心设计？
 
-主要内容：昆明案例、本地展厅、看整板、当地项目、具体服务能力。
+任一项失败，先修对应问题；仍无法修复则降为“补证后做”，不得声称可发布。
 
-重点改变：行动成本、咨询意愿、本地可得性。
+### 7. Learning：让 Skill 自我改进
 
----
+🔴 **CHECKPOINT · 写入学习资产前**
 
-## One video, one main job
+只有以下输入允许写入：用户明确认可／否定、真实发布数据、已确认客户反馈、与现有规则的明确冲突。否则只给复盘建议，不改资产。
 
-不要要求单条内容同时完成：需求激发 + 产品种草 + 科普 + 品牌介绍 + 信任 + 昆明标签 + 咨询 + 成交。
+读取 [asset-rules.md](references/asset-rules.md)，每次只做一项直接相关的增量更新：
 
-评价一条内容时，首先问：
+1. 分离受众、选题、表达、素材、标题、分发与承接变量。
+2. 记录来源、日期、证据状态、适用条件、成功证据、反例和失败条件。
+3. 保留历史与矛盾证据，不覆盖或删除旧结论。
+4. 只存信息逻辑与适用条件，不把一次成功的固定措辞当模板。
 
-> 它有没有完成自己承担的主要任务？
+状态转换：
 
-不得因为一条“信任建立型”安装视频没有漂亮成品图而判定失败。
+- 模板：试验中 → 已验证 → 停用
+- 选题：候选 → 采用 → 停用
+- 增量规则：待验证 → 稳定
 
-不得因为一条“欲望提升型”案例没有强 CTA 而判定失败。
+一次认可只进入“试验中／待验证”；重复成功或真实结果才允许升级。正反结果并存时保留反例并收窄适用条件；变量无法隔离时不升级，设计下一次单变量验证。
 
-不得因为一条“需求激发型”内容不能立即产生咨询而判定失败。
+## Failure recovery
 
-购买决策中的 **想要程度、感知成本、感知风险、信任、行动意愿** 由整个内容组合共同推动，不要求单条视频全部覆盖。
+| 触发条件 | 一线处理 | 仍失败时 |
+| --- | --- | --- |
+| 没有素材 | 先做命题、结构和标记稿，列最小素材包 | 降为“补证后做”，不排正式发布时间 |
+| 真源缺失／冲突 | 标出来源与验证边界，优先最新且已确认规则 | 保留冲突，询问会改变方案的关键问题 |
+| 企业目标无法转成客户价值 | 重做客户任务链 | 判“不做”，改提客户问题方向 |
+| 外部爆款与德夫不匹配 | 只提取停留、推进、画面、信息结构机制 | 放弃迁移，不仿标题公式或替换关键词 |
+| 技术／产品结论无证据 | 删除结论或改为待核验问题 | 停止发布级文案 |
+| 用户要求与主任务冲突 | 明确主任务和机会成本，给最小替代方案 | 请求确认后再批量执行 |
+| 学习反馈无法归因 | 保存正反证据，不升级规则 | 设计单变量测试并等待新数据 |
 
----
+## Source rules
 
-## Route the request
+按风险加载资料。完整路径与素材位置见 [asset-rules.md](references/asset-rules.md)；详细决策、企业目标转译和审稿规则见 [content-system.md](references/content-system.md)。
 
-### Fast path
+不得编造产品性能、品牌历史、合作关系、客户结果、项目事实、价格、服务承诺或技术能力。内部白皮书只能支持背景判断，不能自动成为公开主张证据。
 
-Use when the requested output, audience/context, objective, and factual risk are clear.
+## Anti-pattern blacklist
 
-Internally identify:
+- 单条内容同时承担需求、种草、科普、品牌、信任、本地和成交。
+- 先写企业介绍、标题或口号，再补客户价值。
+- 用“90%的人不知道”“真正高级”“客户买的不是……而是……”替代证据。
+- 把搜索词、单条评论、行业常识或推测写成客户事实。
+- 把参数直接放大为耐用、安全、适用、价格或服务承诺。
+- 写完文章再让剪辑“找对应画面”。
+- 把外部标题只换关键词后复用。
+- 因一次认可升级为稳定规则，或遇到反例后删除历史。
+- 普通生成静默写资产，或一次复盘同时改多条规则。
 
-* target customer
-* primary content job
-* content proposition
-* available evidence
+## Output principle
 
-Then create the requested output directly.
-
-Do not force a visible strategy report before simple creative work.
-
----
-
-### Full path
-
-Use for:
-
-* a new direction
-* ambiguous requests
-* high-cost production
-* business-objective-driven content
-* external inspiration migration
-* a direction that may not be worth doing
-* explicit strategy/planning requests
-
-Keyword-search and read only relevant true-source or asset fragments, then use [content-system.md](references/content-system.md).
-
-The full path exists to find a stronger creative direction. Once the content proposition is clear, move immediately into execution.
-
----
-
-### Learning path
-
-Use only after:
-
-* explicit approval or rejection
-* real published data
-* confirmed customer feedback
-* a conflict with an existing rule
-
-Keyword-search and read only relevant source fragments plus [asset rules](references/asset-rules.md).
-
-Make one directly relevant, additive update. Ordinary generation may read assets but must not write them.
-
----
-
-## Business-objective translation
-
-When the input is an 企业目标, such as:
-
-* 介绍德夫
-* 介绍展厅
-* 介绍工厂
-* 展示本地能力
-* 宣传品牌
-* 推产品
-* 展示服务
-* 打昆明标签
-
-do not convert the company asset itself into the topic.
-
-First translate:
-
-**企业想说什么** → **客户为什么需要知道** → **客户正在完成什么任务** → **当前方式哪里不够** → **客户担心什么** → **什么会帮助他判断** → **德夫哪项能力能够作为答案或证据**
-
-Example:
-
-不要从“德夫有本地工厂”直接生成“带你看看德夫的本地工厂”。
-
-优先寻找“客户为什么会在意本地加工？”
-
-例如：选到喜欢的材料以后，他担心加工、尺寸、纹理、安装最终失控。
-
-此时本地工厂才成为：**降低交付不确定性的证据。**
-
----
-
-## Customer-task check
-
-For important S/A-stage or demand-creation work, internally examine:
-
-* 场景：客户现在正在做什么？
-* 任务：他真正想完成什么？
-* 当前方案：他现在怎么解决？
-* 阻碍：为什么还没有解决？
-* 风险/担忧：他怕什么结果发生？
-* 推动力：什么信息、画面或事实会改变判断？
-* 证据：德夫有什么真实东西可以证明？
-
-Do not mechanically run five Whys. Stop once the real content problem is clear. Do not invent consumer psychology.
-
-For deeper work, mark conclusions as:
-
-* verified fact
-* business judgment
-* hypothesis to validate
-
----
-
-## Consumer insight
-
-Use consumer insight selectively, mainly for demand-creation and important S/A-stage content.
-
-Look for:
-
-> 一个真实存在、但客户未必主动表达或意识到的矛盾；一旦被指出，会改变他对问题的理解。
-
-Insight must explain real behavior.
-
-Do not manufacture philosophical slogans such as “客户买的不是岩板，而是家的温度。”
-
-If there is no evidence, treat the insight as a hypothesis.
-
----
-
-# Creative execution contract
-
-Once a direction is accepted internally, the Skill must convert strategy into executable content.
-
-Do not stop at “痛点 → 解决方案 → 品牌”。
-
-For video work, output should normally reach the following level.
-
----
-
-## 1. Content proposition
-
-用一句自然语言写清：**这条到底要讲什么。**
-
-It should describe a customer-relevant idea, not a corporate communication task.
-
-Wrong: “介绍德夫安装团队。”
-
-Better: “让准备装修的人看到，台面最后落地是否放心，很大一部分取决于安装现场是谁、怎么做。”
-
----
-
-## 2. Opening design
-
-Specify:
-
-* 前 1—3 秒拍什么
-* 第一屏字幕是什么
-* 第一段旁白/口播是什么
-* 为什么目标客户会继续看
-
-Available opening mechanisms include, but are not limited to:
-
-* strong visual result
-* precise customer situation
-* concrete result
-* information gap
-* counter-intuitive judgment
-* specific fact
-* real event/story
-* local relevance
-
-These are mechanisms, not mandatory templates.
-
-Do not mechanically use:
-
-“90%的人不知道”
-“装修千万别……”
-“真正高级的……”
-“如果这是你家……”
-“昆明的朋友注意了……”
-
-unless the actual content makes the phrasing natural and useful.
-
-Questions are allowed when they are genuine customer questions.
-
----
-
-## 3. Script + visual progression
-
-For video creation, normally provide a shot-script table:
-
-| 段落 | 画面 | 字幕/旁白 | 这一段的作用 |
-| -- | -- | ----- | ------ |
-
-The visual must carry part of the information.
-
-Do not write a complete essay first and then tell the editor to “find matching footage”.
-
-Decide:
-
-* 哪句话应该由画面证明
-* 哪句话需要旁白
-* 哪里只需要环境音
-* 哪里不应该继续解释
-
----
-
-## 4. Production form
-
-Choose the form that best serves the content job:
-
-* pure visual
-* visual + short captions
-* voice-over
-* talking head
-* vlog
-* case walkthrough
-* process documentary
-* before/after
-* image montage
-* mixed format
-
-Do not force talking-head narration when images can communicate better.
-
-Do not force educational copy into aesthetic content.
-
----
-
-## 5. Editing guidance
-
-When relevant, specify:
-
-* recommended duration
-* first 3 seconds
-* shot order
-* rhythm
-* original sound / music / ambience
-* where to pause
-* where to use text
-* whether location information should appear early
-* whether CTA is needed
-
-The goal is that a shooter/editor can execute without asking: “所以到底怎么拍？”
-
----
-
-## 6. Title and cover
-
-Only write titles after the content proposition is clear.
-
-Titles should be:
-
-* specific
-* natural
-* relevant to the target audience
-* consistent with what the video actually delivers
-
-For local conversion/search content, “昆明” may be foregrounded.
-
-For demand-creation, aesthetic, or recommendation-feed content, do not sacrifice the main viewing hook just to force “昆明” into the first spoken sentence.
-
-Local relevance can also be delivered through:
-
-* title
-* cover
-* first-screen corner text
-* location tag
-* subtitle
-* project location
-* account positioning
-
-Locality is a required business signal when relevant, not a mandatory sentence template.
-
----
-
-# Content evaluation
-
-Do not use one universal 100-point score for every video.
-
-First identify its primary content job. Then evaluate whether it performs that job.
-
-### Demand creation
-
-Check mainly:
-
-* target-user relevance
-* problem/motivation awakening
-* viewing attraction
-* credibility of the insight
-* whether a new need or judgment is created
-
-### Desire building
-
-Check mainly:
-
-* visual attraction
-* desirability
-* customer projection
-* product/space relevance
-* whether the result feels attainable and real
-
-### Decision help
-
-Check mainly:
-
-* question accuracy
-* usefulness of the judgment
-* clarity
-* risk reduction
-* evidence
-
-### Trust building
-
-Check mainly:
-
-* authenticity
-* behavior evidence
-* professionalism demonstrated through action
-* responsibility / delivery confidence
-* brand linkage
-
-### Local conversion
-
-Check mainly:
-
-* local identification
-* relevance to an existing customer task
-* clear reason to contact / visit / inspect
-* trust
-* action friction
-
-A content piece may have a secondary job, but only the primary job determines whether it succeeds.
-
----
-
-# External inspiration
-
-When adapting external content, do not directly copy its title or sentence pattern.
-
-First identify:
-
-* why people stop
-* why they continue
-* what emotion or curiosity is activated
-* visual mechanism
-* information structure
-* interaction mechanism
-
-Then migrate only the mechanism that genuinely fits 德夫.
-
-Aesthetic or case content does not need to be exclusive to 德夫. Design firms, cabinet companies, and material suppliers may all publish the same kind of space.
-
-The relevant question is not “别人能不能发？”
-
-It is:
-
-> “这条内容能不能为德夫积累有价值的品类、审美、产品、服务或品牌认知？”
-
----
-
-# Source and evidence rules
-
-Choose source loading by risk.
-
-A fast, low-risk rewrite does not default-load all 德夫 sources or workspace assets.
-
-Only read directly relevant rules or fragments when the task carries specific brand, factual, product, claim, authorization, or release risk.
-
-For full or learning work, keyword-search the source files and workspace assets named in [asset rules](references/asset-rules.md), then read only directly relevant fragments.
-
-Treat these sources as the source of truth.
-
-Do not invent:
-
-* product performance
-* brand history
-* cooperation relationships
-* customer results
-* project facts
-* pricing
-* service promises
-* technical capabilities
-
----
-
-# Learning
-
-Validated structures and creative patterns should accumulate.
-
-Use [asset-rules.md](references/asset-rules.md) for permitted learning updates.
-
-When a structure is explicitly approved or repeatedly validated, add it to the template library.
-
-Store:
-
-* the information logic
-* when it works
-* target content job
-* suitable customer stage
-* successful examples
-* failure conditions
-
-Do not store fixed wording as a template unless the wording itself is intentionally reusable.
-
-Feedback such as:
-
-* “这个标题很好”
-* “这个结构以后可以用”
-* “这个很AI”
-* “这种不要再写”
-* “这个案例方向有效”
-
-should be translated into a specific reusable rule, example, or anti-example when justified.
-
----
-
-# Default output principle
-
-For analysis/planning work:
-
-**判断少一点，执行多一点。**
-
-Once the direction is clear, spend most of the output on:
-
-* topic
-* opening
-* script
-* visuals
-* shot progression
-* editing
-* title
-* cover
-* CTA when appropriate
-
-rather than continuing to add diagnostic layers.
-
-For a video task, a successful response should be executable by content staff without requiring them to invent the creative treatment again.
+**判断少一点，执行多一点。** 方向清楚后，把主要篇幅给命题、开头、脚本、画面、镜头推进、剪辑、标题、封面及必要 CTA。简单任务不输出完整框架；高成本或高风险任务才展示决策与边界。
