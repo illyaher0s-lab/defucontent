@@ -1,4 +1,4 @@
 interface:
   display_name: "德夫内容策划"
-  short_description: "为德夫国际石材完成内容策划、素材转化、文案审稿与反馈学习"
-  default_prompt: "Use $defu-content-planning to plan 德夫国际石材的内容。"
+  short_description: "德夫选题与文案创作、任务脚本成片评分、数据记录及内容复盘"
+  default_prompt: "Use $defu-content-planning 处理本次德夫内容任务，按要求创作、评分或复盘。"

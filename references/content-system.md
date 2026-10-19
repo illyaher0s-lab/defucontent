@@ -1,80 +1,42 @@
-# 内容决策与审稿规则
+# 深度策划与审稿
 
-Use this reference only for the full path, external inspirations, or a full-copy review.
+仅用于 Full 创作、外部灵感转化和 review。评分另读 scoring.md；数据和学习另读 asset-rules.md。共用证据门遵循 SKILL.md，不在此重复。
 
-## Evidence boundary
+## Full：从企业目标到客户命题
 
-Display each material conclusion in the decision card as one of these three classes:
+内部依次明确：
 
-- **已确认（含原话/已知事实）**: supplied customer wording, available source material, or a fact that can be checked.
-- **工作假设（可注明有依据的推断）**: a useful but unverified working explanation to test. When it is inferred from named evidence, state that evidence and the reasoning link; it remains a hypothesis rather than a customer fact.
-- **待确认**: a missing fact that could change the decision.
+1. 客户正处于什么具体场景？“装修客户”过宽。
+2. 他要完成什么进展？先不用品牌、产品或展厅等解决方案命名任务。
+3. 当前用什么方式解决，哪里受阻？搜索词、单条评论与行业经验只能支持工作假设。
+4. 什么信息、实物、体验或责任边界能减少风险、时间或选择成本？
+5. 德夫哪项真实能力能提供它，用什么画面或来源证明？
+6. 最终命题：帮助谁完成什么判断，为什么值得看？
 
-Do not present inferred motivations, obstacles, or default choices as customer facts. In particular, search terms, one comment, or a general industry pattern can support a hypothesis, not a claim about what customers definitely want or feel.
+企业要求“介绍展厅／工厂／服务／本地实力”时，企业资产只有在上述价值链成立后才能成为答案或证据。链条不成立，判“不做”，换客户问题；不能仅把公司介绍换成问题式标题。
 
-Missing material does not block strategy, a content proposition, a structure, or a marked draft. List the evidence, footage, facts, and permissions still needed. A release date is not enough to proceed: release scheduling requires material availability, authorship/authorization, and factual verification gates.
+重要的需求激发或 S/A 阶段内容，再查当前方式为何惯用、忽略什么问题、哪些证据可能改变判断。无来源的心理解释保持工作假设，找到实际内容问题就停止，不机械扩展访谈或制造洞察。
 
-## Full-path decision card
+决策卡用 3–6 个短句覆盖：输入与证据状态；客户／唯一任务；当前判断与优先级；一句命题与记忆点；下一步和边界。只展示会影响取舍的依据。
 
-Show a compact card containing:
+- 现在做：用户要方向时给 3–5 个实质不同的命题；要成稿时直接交付最佳方案。
+- 补证后做：给标记稿或最小验证版本及准确素材清单；不把排期视为核验通过。
+- 不做：说明无价值或无法证实的原因，给去除该前提的替代方向；不继续批量写被否定的宣传主张。
 
-1. **输入类型与证据状态**: available user quote/audience, operational goal, assets, external inspiration, existing content/data, and material gaps.
-2. **给谁／内容目标**: the customer stage, decision to support, and intended cognitive or action change.
-3. **当前判断**: why this opportunity helps 德夫's current strategy, including priority and opportunity cost.
-4. **客户任务与阻碍**: situation, hoped-for progress, obstacle, default option or alternative, all with the evidence labels above.
-5. **内容命题**: one sentence stating who gets help with which concrete decision and why the content is worth attention; state one memory point and needed evidence.
-6. **下一步与边界**: available versus required materials, fact/authorization risks, and the gate outcome below.
+## 外部灵感
 
-Form the proposition before titles, formats, or templates. Evaluate whether the content has customer utility, strategic value, category/brand value, and sufficient evidence; do not treat a title as an idea.
+先有德夫客户命题，再拆参考内容的停留理由、信息顺序、情绪、画面推进和证据揭示。只迁移适配机制，不能复制措辞、标题公式或将外部案例改成德夫经历。仅有“高播放”描述，不能推断实际机制有效；没有参考正文／视频时标明无法拆解的部分。
 
-## 客户任务与客户价值翻译
+## Review：问题证据 → 最小修改
 
-Use this layer internally for important topics, especially S/A-stage or demand-creation work, and always when the input begins with an enterprise objective: introducing the company, showroom, factory, service, brand, product, local presence, processing/installation capability, or “showing strength.” Do not require the user to know or see the term JTBD.
+用户仅要求审查时不擅自重写原文件；要求改稿则直接修。遵循工作区明确的审查约定，包括指定 reviewer 和报告位置；审查报告不是运营校准数据，不自动写 07/08/09。
 
-Before forming a topic, establish this chain:
+检查：
 
-1. **场景**：what concrete moment is the customer in? Do not substitute a broad label such as “装修客户.”
-2. **客户任务**：what progress does the customer want to make, stated without 德夫, a product, showroom, factory, or other solution?
-3. **当前解决方式**：what is the customer currently using—such as online cases, samples, a cabinet seller, a designer, other stores, brand reviews, or doing nothing? Label unverified behavior as a working hypothesis.
-4. **阻碍与不确定性**：why does that current way not complete the task? Do not invent an obstacle or inner motive.
-5. **推动条件**：what information, image, experience, evidence, or responsibility boundary would help the customer decide?
-6. **企业价值翻译**：only now state which 德夫 ability can help and what customer risk, effort, or uncertainty it reduces. A showroom, factory, service, brand, equipment, or local tag is evidence of this value—not the content subject by default.
+- **主任务**：每段是否服务同一判断，是否从客户场景进入；去掉品牌仍有什么具体价值？
+- **证据**：参数是否越界为性能／安全／价格／服务承诺？多项目是否冒充单一经历？照片与文字是否证明同一件事？
+- **信息推进**：开头兑现什么，下一段增加什么；删去某段是否影响理解？
+- **表达与品牌**：具体场景、选择、事实替代“高端、匠心、专业靠谱”；删除营销腔、无证据心理判断和夸张冲突。反驳顾虑时及时完成反转。
+- **执行**：画面、字幕、口播是否各有作用？标题是否兑现？素材来源和公开边界是否明确？
 
-For an enterprise objective, answer these seven questions before generating a topic: what the business wants to communicate; why a customer needs to know it; which task it helps complete; which risk, effort, or uncertainty it reduces; what could go wrong without that ability; which real evidence proves it; and which customer judgment should change. If the customer-value answers do not hold, do not make the enterprise asset a standalone topic; state that it is not yet worth doing and propose a customer-task alternative.
-
-For S-stage upstream or demand-creation work, add a compact consumer-insight check when it changes the proposition: surface task; why the current method is habitual; what unnoticed problem it leaves; what result the customer is really trying to secure; and what evidence could change the customer's understanding. Label each point as **已确认（含原话/已知事实）**, **基于业务经验的判断**, or **待验证假设**. Do not turn an attractive sentence into an insight without evidence.
-
-The resulting proposition must state a customer question or decision worth attention first. Use 德夫's case, showroom, factory, product, processing, installation, or service as the answer or proof. Do not write an enterprise-asset proposition such as “介绍德夫展厅／工厂／加工能力” or merely rephrase it as a title.
-
-## One-outcome decision gate
-
-Choose one outcome and do not blend them.
-
-### 现在做
-
-Offer **3–5 genuinely different directions**, then recommend the strongest one, its structure, and—only if requested—the outline or full copy. Directions must differ in at least one of customer stage, decision to change, proposition, core proof, or narrative angle; title-only variations do not count.
-
-For an enterprise-objective input, do not enter this branch until the customer-task and value-translation chain above is complete. If it cannot produce a customer-value proposition, choose **不做** rather than packaging the enterprise asset.
-
-### 补证后做
-
-Name the smallest verification action and the exact evidence, material, factual check, or authorization needed. You may provide a low-cost test direction, but do not make a formal release schedule or imply publication readiness.
-
-### 不做
-
-State why the idea is unsuitable, the opportunity cost, and a better alternative. Do not continue with an ordinary batch of titles, a normal 3–5 topic list, or full promotional copy for the rejected claim.
-
-Without verifiable, compliant evidence, do not claim that stone, a material, or a product treats anxiety, improves relationships, or causes another psychological or health outcome. Such a proposition defaults to **不做**. Do not soften, rephrase, or imply the same unsupported outcome as a selling point; any alternative must remove it and instead help with a concrete material-selection or usage decision.
-
-## External inspiration boundary
-
-An external popular post can contribute a mechanism—such as information order, emotional tension, camera progression, or evidence reveal—not its title formula, wording, or engagement trick. First write a 德夫 customer decision proposition; then choose a structure that serves it. Never reproduce or merely replace keywords in a formulaic headline.
-
-## Drafting and review
-
-- Enter through a customer's specific situation, decision, uncertainty, or desired result. Brand, product, and 德夫 capability appear only as answer, proof, or delivery explanation.
-- Treat a showroom, factory, equipment, local presence, processing, installation, service, product, or brand as evidence of customer value, not the default topic subject. Before using one, verify what customer task it serves and what evidence makes that connection credible.
-- Give one main memory point. Use scenes, choices, facts, products, or visuals rather than phrases such as “高端”, “匠心”, “质感”, “专业靠谱” as unsupported conclusions.
-- Convert parameters into a customer decision or usage boundary. Do not turn an isolated parameter into a durability, safety, price, case, comparison, or service promise without proof and applicable conditions.
-- Before delivering full copy, remove the brand name mentally: it must still give the target customer usable decision value. Briefly state the result of this check, confirming that the draft remains useful without “德夫”. Check that the opening is not brand introduction, every material claim is supported or removed/marked, and ownership, authorization, safety, and factual risks are resolved.
-- Remove generic marketing language, AI-sounding filler, unsupported customer-psychology assertions, exaggerated conflict, and any headline promise the content or material cannot fulfill.
+交付优先列最影响结果的 1–3 个问题，每项给原句／镜头证据、影响与最小修改；所有已发现的发布红线都要列出，不受数量限制。没有数值评分请求就不强制评分。原稿缺失先指出，不凭标题审完整稿。

@@ -1,45 +1,63 @@
-# 德夫内容资产规则
+# 德夫资产、数据与复盘
 
-## Sources and retrieval
+仅在检索业务真源、写记录、复盘或学习时加载。`WORKSPACE` 与 `ASSET_ROOT` 按主文件解析。技能目录保存方法和可复用测试；业务数据、评分历史与学习结论只保存到 **WORKSPACE/content-ops/defu-content-system/**，不随 skill 更新改写。
 
-The workspace asset location is `content-ops\defu-content-system\`. It may be absent or incomplete; do not bulk-create it or fill empty libraries.
+## 真源与资产检索
 
-Before relying on local assets, search filenames and content fragments with the request's customer stage, task, content type, product/material, evidence type, template, or case keywords. Read only directly relevant files first; broaden only if they do not answer the current question. Do not load every asset by default.
+先用客户阶段、任务、材料、证据或案例关键词检索，只读直接相关片段，找不到再扩展。真源不存在时说明边界，不替它编内容。
 
-Use these existing files as the current content-rule and source-boundary references instead of duplicating their contents into this asset system:
+- 内容要求：`WORKSPACE/knowledge/德夫线上内容营销核心认知与创作指令_V1.1_正式版.md`、`WORKSPACE/knowledge/德夫线上内容执行标准.md`。
+- 老板反馈或规则：`WORKSPACE/state/rules.md`、`WORKSPACE/state/boss-thinking-model.md`。
+- 公司背景：`WORKSPACE/knowledge/德夫国际石材全景白皮书-2026-07-25.md`。仅作内部背景，公开价格、性能、认证、合作、独家、案例规模及服务承诺还需当前原始证据。
 
-- `knowledge/德夫线上内容营销核心认知与创作指令_V1.1_正式版.md`
-- `knowledge/德夫线上内容执行标准.md`
-- `state/rules.md`
-- `state/boss-thinking-model.md`
+以下文件均位于 ASSET_ROOT，缺失时只在本次确实有内容且获准写入时创建，不批量建空库：
 
-When a planning decision depends on the company's origin, business model, brand matrix, delivery chain, or current growth stage, also consult the relevant passages of:
+| 文件 | 用途 |
+| --- | --- |
+| `00_德夫内容战略地图.md` | 用户阶段及固定 SABC 优先级唯一真源，不自动生成替代版 |
+| `01_内容类型库.md` | 可复用内容类型 |
+| `02_内容结构模板库.md` | 信息结构及适用条件，不存固定套话 |
+| `04_优秀案例与反例库.md` | 正反证据与机制 |
+| `05_选题池.md` | 候选／采用／停用；明确要求保存选题时追加 |
+| `06_内容复盘与规则更新.md` | 结果解释、规则性反馈、待验证规则及反例 |
+| `07_视频评分与校准记录.md` | 成片分、发布信息、分期数据、校准 |
+| `08_视频任务评分与迭代记录.md` | 制作前任务分及复评 |
+| `09_脚本分镜文案评分与迭代记录.md` | 制作前稿件分及复评 |
 
-- `knowledge/德夫国际石材全景白皮书-2026-07-25.md`
+## 记录授权与关联
 
-Treat this white paper as an **internal company-background and stage-strategy reference**, dated 2026-07-25. It does not, by itself, verify claims intended for public release. Prices and discounts, product performance or certifications, competitor comparisons or rankings, exclusivity claims, project/case scale, service commitments, and superlative statements still require a current original source or the evidence route specified by the current content rules. If that evidence is unavailable, mark the claim `待核验` or omit it.
+- 普通创作、审稿、单次评分只读；明确要求记录／保存／回填，或已有适用的持续记录约定，才写对应产物。明确“不记录”覆盖默认约定。
+- 真实数据、明确认可／否定、已确认客户反馈或规则冲突允许记录相关观察；**允许记录事实不等于允许升级规则**。只有空泛猜想时只给分析。
+- 先以作品 ID、链接、素材路径或唯一标题匹配既有记录。用户说“上次”时先检索上下文和台账；多候选或无法匹配时，列已知数据并问作品标识，不写到猜测的作品下。
+- 新评分沿用 `VT-YYYYMMDD-序号`、`SS-YYYYMMDD-序号`、`VC-YYYYMMDD-序号`；先读已有 ID，以代码取当天最大序号加一。复评沿用主体 ID，追加日期及版本；跨阶段引用关联 ID。
+- 回填时保留平台／账号、作品标识、发布时间（未知写未提供）、观察时点或发布后天数、原始指标、数据来源。无原评分也可建发布数据记录，但原评分填未提供，不能倒填预测。
 
-If a source is unavailable, state the verification boundary; do not invent a substitute rulebook.
+## 追加与核验
 
-## On-demand asset documents
+写入前读目标文件及相同作品的历史，输出路径必须解析到 ASSET_ROOT 内。用文件工具或代码追加，保留原文件全部内容；新增段落引用原 ID，不必插入旧段落内部。禁止覆盖历史、删反例或把升级后的当前口径套到旧分。
 
-Use these six documents only when directly relevant:
+以 `主体ID＋内容版本／观察时点＋记录类型＋数据来源` 定位事件，再比较实际内容：完全相同则不重复追加；同一时点数据不同则新增“更正”，写明旧值、新值、来源与原因，不覆盖旧值。不得把暂时文件或测试数据写成业务样本。
 
-| Document | Purpose | Useful search terms |
-| --- | --- | --- |
-| `00_德夫内容战略地图.md` | customer stages, SABC, stage targets | 用户阶段, SABC, 目标 |
-| `01_内容类型库.md` | repeatable content types | 内容类型, 用户阶段, 证据类型 |
-| `02_内容结构模板库.md` | information structures, not fixed wording | 模板编号, 适用用户, 内容类型, 状态 |
-| `04_优秀案例与反例库.md` | approved/rejected cases and mechanisms | 正例, 反例, 内容类型, 来源 |
-| `05_选题池.md` | candidate opportunities and their choices | 选题编号, 用户阶段, 状态 |
-| `06_内容复盘与规则更新.md` | published results, real customer language, delta rules | 发布内容, 日期, 结论状态 |
+写入后读回新段及原记录，确认旧内容保留、本次条目完整；回复实际路径和 ID。失败或状态不明时先检查有无完整新增段，不能直接重试制造重复记录；无法确认就交付待写条目并明确尚未确认落盘。
 
-## Learning writes and history
+记录最少字段：
 
-Only an explicit user approval/rejection, real published data, or a conflict with an existing rule may write an asset. Write one direct, additive update to the relevant document; ordinary generation only reads. Record source, date, confirmation level, applicable conditions, and the change. Do not silently overwrite or delete history; preserve contradictory feedback and counterexamples.
+- **通用**：ID、日期、对象／版本、来源、证据状态、关联记录、结论。
+- **08**：主要／辅助画像、唯一任务、六维分数及依据、最低项、最小修改、阶段决定。
+- **09**：关联任务（无则注明）、输入稿件、唯一任务、六维分数及证据计划、待核验项、最低项、最小修改、制作决定。
+- **07**：来源类别、作品标识、评分日期与标准权重／细则版本、内容类型、唯一任务、原评分或未提供、红线／风险、逐期数据与来源、校准结论、状态、可迁移机制与边界。
+- **06／学习资产**：相关 ID、原目标与假设、实际结果、来源和观察期、解释与不能归因的变量、适用条件、反例、结论状态、下一次验证动作。
 
-- **Structure templates:** `试验中` / `已验证` / `停用`. One user approval is evidence but keeps a template at `试验中`. Real results or repeated success can promote it to `已验证`. A counterexample can stop recommendation as `停用`, while preserving its original approval and all later evidence.
-- **Topics:** `候选` / `采用` / `停用`. Record adoption separately from results; real comments, consultation, visit, or published performance belongs in the retrospective document.
-- **Delta rules and case conclusions:** `待验证` / `稳定`. Add only a real-use delta that the true sources do not already cover. Explicit feedback starts as `待验证`; repeated feedback or real results can make it `稳定`.
+结构／模板反馈用 `learn` 默认追加 `02_内容结构模板库.md`；需要把反馈沉淀为规则、结果解释或反例时用 `learn --target rule` 追加 `06_内容复盘与规则更新.md`。`retro` 始终追加 `06`。两者均须有证据和记录授权，不把一次认可升级为稳定规则。
 
-In a retrospective, distinguish as far as evidence allows between audience, topic, expression, material, headline, distribution, and follow-through. Do not collapse a weak result into a generic instruction such as “improve the opening.”
+## 校准与复盘
+
+`待校准`＝尚无可用结果或未能关联原判断；`部分校准`＝部分指标或观察期数据已到，关键目标仍缺证据；`已校准`＝针对本条预设目标和观察期，能用可追溯证据回答原判断，并标明结论成立／被否定及边界。已校准不等于评分准确或规则稳定。
+
+缺数据逐项写“未提供”；口述数值写“用户提供”，用户称已核对但未展示原件时保留该来源区别。曝光、互动、咨询、到店、成交分开；7天／30天是既有观察建议，不丢弃第3天等实际回填，也不自动创建定时任务。
+
+复盘顺序：原任务与假设 → 实际结果／证据 → 哪些判断获支持或被否定 → 无法归因的变量 → 下一次只改什么。区分受众、选题、表达、素材、标题、分发和承接；分母或平台口径不一致不强比，不把相关性当因果。数据回填写 07，复盘结论写 06，并以 ID 互引；每次只沉淀一项直接相关改进，不重复抄整份数据。
+
+状态：模板 `试验中 → 已验证 → 停用`，选题 `候选 → 采用 → 停用`，增量规则 `待验证 → 稳定`。首次认可／单条成功仅为试验中或待验证；重复独立反馈或可追溯的实际结果支持后才考虑升级，须写明适用条件。正反结果混杂、混杂变量未排除时不升级，追加反例、收窄条件。只保存信息逻辑，不把成功措辞固化为万能模板。
+
+例如：同一作品第3天有播放与收藏，但原目标是有效咨询且未提供咨询质量，只能部分校准；复盘可提一个待验证修改，不得断言开头导致成交。
