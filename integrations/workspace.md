@@ -1,4 +1,49 @@
-# 内容工作台接入接口（待 Agent 适配）
+# 内容工作台接入接口
+
+## 飞书多维表格写入
+
+已提供 `scripts/feishu_write.py`，从 `~/.hermes/.env` 读取凭证（FEISHU_APP_ID/FEISHU_APP_SECRET），使用 `lark_oapi` SDK。
+
+**用法**：
+```python
+import lark_oapi as lark
+from lark_oapi.api.bitable.v1 import *
+import os
+
+# 读凭证
+env_file = os.path.expanduser("~/.hermes/.env")
+app_id = app_secret = None
+with open(env_file, 'r') as f:
+    for line in f:
+        if '=' in line:
+            key, val = line.strip().split('=', 1)
+            val = val.strip('"').strip("'")
+            if 'APP_ID' in key: app_id = val
+            elif 'APP_SECRET' in key: app_secret = val
+
+# 创建客户端
+client = lark.Client.builder().app_id(app_id).app_secret(app_secret).build()
+
+# 写入记录
+request = CreateAppTableRecordRequest.builder() \
+    .app_token("<app_token>") \
+    .table_id("<table_id>") \
+    .request_body(AppTableRecord.builder().fields({
+        "文本": "选题标题",
+        "核心价值点": "价值描述",
+        # ... 其他字段
+    }).build()) \
+    .build()
+
+response = client.bitable.v1.app_table_record.create(request)
+```
+
+**字段格式**：字段名直接用中文名（如 `"文本"`），值类型按表格定义。选择字段用列表 `["选项1"]`，优先级等特殊字段用 `[{"text": "A", "type": "text"}]`。
+
+**写入前必查**：用 `ListAppTableFieldRequest` 获取字段定义，检查选择类字段的 `property.options`，只能填已有选项，不得自造新值。写入前用 `ListAppTableRecordRequest` 读3条现有记录查看实际格式。
+
+## 通用接口约定
+
 **不在 Skill 内绑定飞书 API、表格字段、数据库或连接器。** 具体接入由使用该 Skill 的 Agent 根据用户授权、可用工具与当前飞书工作台结构实现。
 
 模块交接时使用可映射的通用对象，而非预设飞书列名：
