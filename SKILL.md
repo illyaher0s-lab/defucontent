@@ -5,19 +5,19 @@ description: Use for 德夫国际石材 content planning, batch topic generation
 
 # 德夫内容工作流
 
-先执行用户实际要求，不把简单文案任务扩大为完整营销报告。围绕真实客户判断、素材与可证实的德夫价值创作；兼顾观看理由与后续经营价值。
+先执行用户实际要求，不把简单文案任务扩大为完整营销报告。**当前默认内容形态为图文，写作前必须读取 modules/writing.md；每版必须有封面标题、吸引人的正文第一句，正文不超过150字符（含标点，封面标题另计），不得套用视频脚本格式。**围绕真实客户判断、素材与可证实的德夫价值创作；兼顾观看理由与后续经营价值。
 
 ## 1. 精准路由
 
 | 用户要做什么 | 读取 | 默认交付 |
 | --- | --- | --- |
 | 单条/批量选题、素材找选题 | [Planning](modules/planning.md) | 选题或优先级清单 |
-| 文案、改稿、脚本、分镜 | [Writing](modules/writing.md) | 直接可用的指定成稿 |
+| 图文文案、改稿、多个版本 | [Writing](modules/writing.md) | 直接可用的指定成稿 |
 | 批量初筛/质量检查 | [Review](modules/review.md) | 通过/修改/补证/放弃 |
 | 不打分的审稿/审片 | Review + [content-system](references/content-system.md) | 最关键问题与最小修改 |
 | 正式评分：选题/脚本/成片 | Review + [scoring](references/scoring.md) | 按阶段唯一标准及可见证据评分 |
 | 发布数据、复盘、反馈学习 | [Learning](modules/learning.md) + [asset-rules](references/asset-rules.md) | 数据/结论，授权时才写入 |
-| 一次完成多条内容 | [batch](workflows/batch.md) + 所需模块 | 批量成品及阻塞清单 |
+| 批量选题与单题多版本创作 | [batch](workflows/batch.md) + 所需模块 | 20选10后停；用户选1题再5选3 |
 | 精细打磨单条 | [single](workflows/single.md) + 所需模块 | 用户要求的当前阶段成品 |
 | 同步内容工作台/飞书 | [workspace 接口](integrations/workspace.md) | 由 Agent 按实际表结构适配 |
 
