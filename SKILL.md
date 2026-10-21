@@ -12,7 +12,8 @@ description: Use for 德夫国际石材 content planning, batch topic generation
 | 用户要做什么 | 读取 | 默认交付 |
 | --- | --- | --- |
 | 单条/批量选题、素材找选题 | [Planning](modules/planning.md) | 选题或优先级清单 |
-| 图文文案、改稿、多个版本 | [Writing](modules/writing.md) | 直接可用的指定成稿 |
+| 单篇图文、改稿 | [Writing](modules/writing.md) | 按用户要求直接交稿 |
+| 用户选中1题，生成多个版本 | [batch](workflows/batch.md) + [Writing](modules/writing.md) + [Review](modules/review.md) | 内部5稿逐评，默认只交入选3稿 |
 | 批量初筛/质量检查 | [Review](modules/review.md) | 通过/修改/补证/放弃 |
 | 不打分的审稿/审片 | Review + [content-system](references/content-system.md) | 最关键问题与最小修改 |
 | 正式评分：选题/脚本/成片 | Review + [scoring](references/scoring.md) | 按阶段唯一标准及可见证据评分 |
@@ -20,6 +21,8 @@ description: Use for 德夫国际石材 content planning, batch topic generation
 | 批量选题与单题多版本创作 | [batch](workflows/batch.md) + 所需模块 | 20选10后停；用户选1题再5选3 |
 | 精细打磨单条 | [single](workflows/single.md) + 所需模块 | 用户要求的当前阶段成品 |
 | 同步内容工作台/飞书 | [workspace 接口](integrations/workspace.md) | 由 Agent 按实际表结构适配 |
+
+**多版本写作不等于交付所有候选**：选题后生成5稿，必须先执行 Review 的逐稿评估再交3稿；若未完成评审不得宣称“5选3”。可运行 Python 时用 `scripts/validate_copy_review.py` 校验评审记录与所选数量，不能通过时不可标记完成。脚本只校验记录完整性与格式，不能保证创作质量。
 
 用户要求多操作就按顺序执行，不遗漏也不自动增加。用户只要字幕/标题，直接给字幕/标题。普通创作不自动正式评分、记录或发布。批量轻检不等于完整六维评分。没有可用图像/视频生成工具时，不声称能自动生成成片。
 
