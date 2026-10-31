@@ -1,6 +1,7 @@
 --- a/adapter.py
 +++ b/adapter.py
 @@ -1441,6 +1441,7 @@ class FeishuPlatformAdapter(BasePlatformAdapter):
+             .register_p2_im_chat_access_event_bot_p2p_chat_entered_v1(self._on_p2p_chat_entered)
              .register_p2_im_message_recalled_v1(self._on_message_recalled)
              .register_p2_customized_event("drive.notice.comment_add_v1", self._on_drive_comment_event)
 +            .register_p2_customized_event("drive.file.bitable_record_changed_v1", self._on_bitable_record_changed)
@@ -21,3 +22,5 @@
 +        )
 +
      def _on_reaction_event(self, event_type: str, data: Any) -> None:
+         """Route user reactions on bot messages as synthetic text events."""
+         event = getattr(data, "event", None)
