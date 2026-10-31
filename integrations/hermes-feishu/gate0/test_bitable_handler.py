@@ -1,130 +1,112 @@
 #!/usr/bin/env python3
-"""
-Gate 0 多维表格事件处理器 - 本地测试
-
-测试事件解析和过滤逻辑，无需连接真实飞书服务。
-"""
+"""Regression tests for the actual Gate 0 parser module (no duplicate mock handler)."""
 import logging
-from typing import Any
+import unittest
+from types import SimpleNamespace
 
-# 模拟 logger
-logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
-logger = logging.getLogger(__name__)
+from feishu_bitable_gate0 import parse_gate0_record_edits, log_gate0_record_edits
+
+FILE, TABLE = "test-base", "test-table"
 
 
-def _on_bitable_record_changed(data: Any) -> Any:
-    """Gate 0 多维表格记录变更事件处理器"""
-    try:
-        event = data.get("event", {})
-        file_token = event.get("file_token")
-        table_id = event.get("table_id")
-        action = event.get("action")
-        record_id = event.get("record_id")
-        event_id = data.get("uuid") or data.get("event_id")
-        
-        # Gate 0 测试表过滤（替换为实际的 file_token 和 table_id）
-        GATE0_FILE_TOKEN = "YOUR_FILE_TOKEN_HERE"
-        GATE0_TABLE_ID = "YOUR_TABLE_ID_HERE"
-        
-        if file_token != GATE0_FILE_TOKEN or table_id != GATE0_TABLE_ID:
-            logger.debug(f"[Feishu] Ignoring bitable event from non-Gate0 table: {file_token}/{table_id}")
-            return
-        
-        # 只记录 record_edited
-        if action != "record_edited":
-            logger.debug(f"[Feishu] Ignoring bitable action: {action}")
-            return
-        
-        # 记录事件（不包含敏感字段值）
-        logger.info(
-            f"[Feishu] Gate 0 bitable event: "
-            f"event_id={event_id}, "
-            f"file_token={file_token}, "
-            f"table_id={table_id}, "
-            f"action={action}, "
-            f"record_id={record_id}"
+def sample(actions=None, *, file_token=FILE, table_id=TABLE, event_id="evt_1"):
+    if actions is None:
+        actions = [{"action": "record_edited", "record_id": "rec_1"}]
+    return {
+        "schema": "2.0",
+        "header": {"event_id": event_id, "event_type": "drive.file.bitable_record_changed_v1"},
+        "event": {
+            "file_token": file_token,
+            "table_id": table_id,
+            "action_list": actions,
+        },
+    }
+
+
+class TestGate0Parser(unittest.TestCase):
+    def parse(self, payload, **overrides):
+        return parse_gate0_record_edits(
+            payload, file_token=overrides.get("file_token", FILE),
+            table_id=overrides.get("table_id", TABLE),
         )
-        
-        return None
-        
-    except Exception as e:
-        logger.warning(f"[Feishu] Failed to process bitable event: {e}", exc_info=True)
-        return None
 
+    def test_official_event_shape(self):
+        self.assertEqual(self.parse(sample()), [("evt_1", "rec_1")])
 
-# ============================================
-# 测试用例
-# ============================================
+    def test_sdk_object_and_object_header(self):
+        event = sample()
+        sdk_event = SimpleNamespace(
+            header=SimpleNamespace(event_id="evt_sdk"),
+            event=event["event"],
+        )
+        self.assertEqual(self.parse(sdk_event), [("evt_sdk", "rec_1")])
 
-def test_gate0_event():
-    """测试 Gate 0 表的 record_edited 事件"""
-    print("\n=== Test 1: Gate 0 表 record_edited 事件 ===")
-    event = {
-        "uuid": "test-event-001",
-        "event": {
-            "file_token": "YOUR_FILE_TOKEN_HERE",
-            "table_id": "YOUR_TABLE_ID_HERE",
-            "action": "record_edited",
-            "record_id": "test_record_id"
-        }
-    }
-    _on_bitable_record_changed(event)
+    def test_json_string_event(self):
+        import json
+        payload = sample()
+        payload["event"] = json.dumps(payload["event"])
+        self.assertEqual(self.parse(payload), [("evt_1", "rec_1")])
 
+    def test_multiple_actions_ignores_added_deleted(self):
+        actions = [
+            {"action": "record_added", "record_id": "rec_added"},
+            {"action": "record_edited", "record_id": "rec_a"},
+            {"action": "record_deleted", "record_id": "rec_deleted"},
+            {"action": "record_edited", "record_id": "rec_b"},
+        ]
+        self.assertEqual(
+            self.parse(sample(actions)), [("evt_1", "rec_a"), ("evt_1", "rec_b")]
+        )
 
-def test_wrong_table():
-    """测试非 Gate 0 表事件（应被忽略）"""
-    print("\n=== Test 2: 非 Gate 0 表事件（应忽略）===")
-    event = {
-        "uuid": "test-event-002",
-        "event": {
-            "file_token": "OTHER_FILE_TOKEN",
-            "table_id": "OTHER_TABLE_ID",
-            "action": "record_edited",
-            "record_id": "rec123"
-        }
-    }
-    _on_bitable_record_changed(event)
+    def test_other_table_is_ignored(self):
+        self.assertEqual(self.parse(sample(table_id="not-gate0")), [])
+        self.assertEqual(self.parse(sample(file_token="not-gate0")), [])
 
+    def test_missing_configuration_disables_handler(self):
+        self.assertEqual(self.parse(sample(), file_token=""), [])
+        self.assertEqual(self.parse(sample(), table_id=""), [])
 
-def test_wrong_action():
-    """测试 Gate 0 表但非 record_edited 事件（应被忽略）"""
-    print("\n=== Test 3: Gate 0 表但非 record_edited 事件（应忽略）===")
-    event = {
-        "uuid": "test-event-003",
-        "event": {
-            "file_token": "YOUR_FILE_TOKEN_HERE",
-            "table_id": "YOUR_TABLE_ID_HERE",
-            "action": "record_created",
-            "record_id": "rec456"
-        }
-    }
-    _on_bitable_record_changed(event)
+    def test_malformed_and_legacy_payloads_are_ignored(self):
+        self.assertEqual(self.parse({}), [])
+        self.assertEqual(self.parse(None), [])
+        self.assertEqual(self.parse({"event": {"action": "record_edited"}}), [])
+        self.assertEqual(self.parse(sample(actions="not-an-array")), [])
+        self.assertEqual(self.parse(sample(actions=[None, 1, {}])), [])
 
+    def test_invalid_identifiers_are_not_logged(self):
+        self.assertEqual(
+            self.parse(sample(actions=[{"action": "record_edited", "record_id": "rec\ninjected"}])),
+            [],
+        )
+        self.assertEqual(
+            self.parse(sample(event_id="id\ninjected")), [("unknown", "rec_1")]
+        )
 
-def test_malformed_event():
-    """测试格式错误的事件（应优雅处理）"""
-    print("\n=== Test 4: 格式错误的事件（应优雅处理）===")
-    event = {
-        "uuid": "test-event-004",
-        "event": {}  # 缺少必要字段
-    }
-    _on_bitable_record_changed(event)
+    def test_log_reports_only_safe_metadata(self):
+        logger = logging.getLogger("gate0-test")
+        payload = sample()
+        payload["event"]["action_list"][0]["after_value"] = [
+            {"field_id": "secret_field", "field_value": "DO_NOT_LOG"}
+        ]
+        with self.assertLogs(logger, level="INFO") as logs:
+            count = log_gate0_record_edits(
+                payload, logger, file_token=FILE, table_id=TABLE
+            )
+        self.assertEqual(count, 1)
+        joined = "\n".join(logs.output)
+        self.assertIn("record_id=rec_1", joined)
+        self.assertIn("event_id=evt_1", joined)
+        self.assertNotIn("DO_NOT_LOG", joined)
+        self.assertNotIn(FILE, joined)
+
+    def test_no_log_on_unmatched_event(self):
+        logger = logging.getLogger("gate0-test")
+        with self.assertNoLogs(logger, level="INFO"):
+            count = log_gate0_record_edits(
+                sample(table_id="other"), logger, file_token=FILE, table_id=TABLE
+            )
+        self.assertEqual(count, 0)
 
 
 if __name__ == "__main__":
-    print("开始测试 Gate 0 多维表格事件处理器...\n")
-    print("=" * 60)
-    print("\n注意: 使用前请替换 YOUR_FILE_TOKEN_HERE 和 YOUR_TABLE_ID_HERE")
-    print("      为实际的飞书多维表格 file_token 和 table_id\n")
-    print("=" * 60)
-    
-    test_gate0_event()
-    test_wrong_table()
-    test_wrong_action()
-    test_malformed_event()
-    
-    print("\n" + "=" * 60)
-    print("\n✓ 所有测试完成")
-    print("\n预期结果:")
-    print("  - Test 1: 应记录事件（INFO 级别）")
-    print("  - Test 2-4: 应忽略或优雅处理（DEBUG/WARNING 级别）")
+    unittest.main(verbosity=2)
