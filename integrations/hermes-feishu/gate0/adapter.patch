@@ -1,0 +1,57 @@
+--- a/adapter.py
++++ b/adapter.py
+@@ -1441,6 +1441,7 @@ class FeishuPlatformAdapter(BasePlatformAdapter):
+             .register_p2_im_chat_access_event_bot_p2p_chat_entered_v1(self._on_p2p_chat_entered)
+             .register_p2_im_message_recalled_v1(self._on_message_recalled)
+             .register_p2_customized_event("drive.notice.comment_add_v1", self._on_drive_comment_event)
++            .register_p2_customized_event("drive.file.bitable_record_changed_v1", self._on_bitable_record_changed)
+             .register_p2_customized_event("vc.bot.meeting_invited_v1", self._on_meeting_invited_event)
+             .build()
+         )
+@@ -2169,6 +2170,45 @@ class FeishuPlatformAdapter(BasePlatformAdapter):
+         from plugins.platforms.feishu.feishu_meeting_invite import handle_meeting_invited_event
+         self._submit_if_ready("meeting invite event", lambda: handle_meeting_invited_event(self, data))
+ 
++    def _on_bitable_record_changed(self, data: Any) -> Any:
++        """Gate 0 多维表格记录变更事件处理器（最小化实现）
++        
++        仅记录 Gate 0 测试表的 record_edited 事件。
++        不调用 AI，不修改记录，不触发业务流程。
++        """
++        try:
++            event = data.get("event", {})
++            file_token = event.get("file_token")
++            table_id = event.get("table_id")
++            action = event.get("action")
++            record_id = event.get("record_id")
++            event_id = data.get("uuid") or data.get("event_id")
++            
++            # Gate 0 测试表过滤（替换为实际的 file_token 和 table_id）
++            GATE0_FILE_TOKEN = "YOUR_FILE_TOKEN_HERE"
++            GATE0_TABLE_ID = "YOUR_TABLE_ID_HERE"
++            
++            if file_token != GATE0_FILE_TOKEN or table_id != GATE0_TABLE_ID:
++                logger.debug(f"[Feishu] Ignoring bitable event from non-Gate0 table: {file_token}/{table_id}")
++                return
++            
++            # 只记录 record_edited
++            if action != "record_edited":
++                logger.debug(f"[Feishu] Ignoring bitable action: {action}")
++                return
++            
++            # 记录事件（不包含敏感字段值）
++            logger.info(
++                f"[Feishu] Gate 0 bitable event: "
++                f"event_id={event_id}, "
++                f"file_token={file_token}, "
++                f"table_id={table_id}, "
++                f"action={action}, "
++                f"record_id={record_id}"
++            )
++            
++        except Exception as e:
++            logger.warning(f"[Feishu] Failed to process bitable event: {e}", exc_info=True)
++        
++        return None
++
+     def _on_reaction_event(self, event_type: str, data: Any) -> None:
